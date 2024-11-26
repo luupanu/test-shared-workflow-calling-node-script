@@ -14,7 +14,7 @@ jobs:
           ref: main
           repository: luupanu/test-shared-workflow-calling-node-script
           sparse-checkout: |
-            some-script.js
+            .github/workflows/some-script.js
           sparse-checkout-cone-mode: false
 
       - name: Git clone Node script
