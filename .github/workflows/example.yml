@@ -10,6 +10,7 @@ jobs:
       - name: Git clone the repo
         uses: actions/checkout@v4
         with:
+          path: '.'
           ref: main
           repository: luupanu/test-shared-workflow-calling-node-script
           sparse-checkout: |
