@@ -1,0 +1,24 @@
+name: Testing
+
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: read
+    steps:
+      - name: Git clone the repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run a script
+        run: node some-script.js
