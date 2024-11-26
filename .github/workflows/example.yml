@@ -11,6 +11,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          repository: luupanu/test-shared-workflow-calling-node-script
+          sparse-checkout: |
+            some-script.js
+          sparse-checkout-cone-mode: false
+
+      - name: Git clone Node script
+        uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Install Node
         uses: actions/setup-node@v4
