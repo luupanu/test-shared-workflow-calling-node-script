@@ -10,7 +10,7 @@ jobs:
       - name: Git clone the repo
         uses: actions/checkout@v4
         with:
-          path: '.'
+          path: some-script
           ref: main
           repository: luupanu/test-shared-workflow-calling-node-script
           sparse-checkout: |
@@ -28,4 +28,4 @@ jobs:
           node-version: 20
 
       - name: Run a script
-        run: node some-script.js
+        run: node some-script/.github/workflows/some-script.js
