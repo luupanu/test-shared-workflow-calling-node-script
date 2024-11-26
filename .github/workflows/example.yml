@@ -6,9 +6,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      packages: read
     steps:
       - name: Git clone the repo
         uses: actions/checkout@v4
