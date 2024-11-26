@@ -20,6 +20,7 @@ jobs:
       - name: Git clone Node script
         uses: actions/checkout@v4
         with:
+          path: main
           ref: main
 
       - name: Install Node
